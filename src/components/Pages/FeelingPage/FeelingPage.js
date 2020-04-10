@@ -4,6 +4,22 @@ import { withRouter } from 'react-router-dom';
 
 class FeelingPage extends Component {
 
+  // initial state is empty
+  state = {
+    type: 'Feelings',
+    response: '',
+  }
+  
+  // on change update the state to track current value
+  // This gets passed to NextButton as a prop for input validation
+  onChange = ( event ) => {
+    console.log( 'Got a change', event.target.value );
+    this.setState({
+      ...this.state,
+      response: event.target.value,
+    });
+  }
+
   render() {
     return (
         <section className="feedbackBody">
@@ -11,8 +27,8 @@ class FeelingPage extends Component {
                 <p>How are you feeling today?</p>
             </header>
             <form>
-                <input type="number" placeholder="Feeling?"></input>
-                <NextButton />
+                <input type="number" placeholder="Feeling?" onChange={ (event) => this.onChange( event ) }></input>
+                <NextButton response={ this.state }/>
             </form>
         </section>
     );

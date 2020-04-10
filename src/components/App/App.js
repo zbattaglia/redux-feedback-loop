@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route, withRouter } from 'react-router-dom';
 import './App.css';
 
 import Header from '../Header/Header';
@@ -11,8 +11,9 @@ import ReviewPage from '../Pages/ReviewPage/ReviewPage';
 
 class App extends Component {
 
+  // initial app startup should take us to the first page
   componentDidMount() {
-    // this.props.history.push( '/' );
+    this.props.history.push( '/' );
   }
 
   render() {
@@ -31,4 +32,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
