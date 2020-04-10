@@ -12,8 +12,15 @@ class NextButton extends Component {
     handleClick = ( event ) => {
         event.preventDefault();
         console.log( 'Got a Next', this.props.nextPage );
-        this.props.dispatch({ type: 'NEXT_PAGE' });
-        this.props.history.push( `/${ this.props.nextPage.page + 1 }`)
+        // gets response passed as a prop from the current page and checks for a non-empty input for input validation
+        // on valid response changes to next page and puts response on redux state
+        if( this.props.response.response !== '' ) {
+            this.props.dispatch({ type: 'NEXT_PAGE', payload: this.props.response });
+            this.props.history.push( `/${ this.props.nextPage.page + 1 }`)
+        }
+        else {
+            alert( 'Please provide a response.' );
+        }
     }
 
     render() {
