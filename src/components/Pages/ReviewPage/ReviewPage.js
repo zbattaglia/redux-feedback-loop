@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import {connect} from 'react-redux';
 import Header from '../../Header/Header';
 import BackButton from '../../BackButton/BackButton';
+import FeedbackList from '../../FeedbackList/FeedbackList';
 
 class ReviewPage extends Component {
 
@@ -33,7 +34,7 @@ class ReviewPage extends Component {
                 <p>Review Your Feedback</p>
             </header>
              <div className="feedback">
-                 <p>Placeholder for review</p>
+                 <FeedbackList />
              </div>
              <br />
             <form>
