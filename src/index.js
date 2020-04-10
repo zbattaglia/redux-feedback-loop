@@ -20,6 +20,11 @@ const changePage = (state = { feedback: [], page: 0 }, action) => {
         const updatedState = { feedback: [ ...state.feedback, action.payload ], page: state.page + 1 }
         return updatedState;
     }
+    if( action.type === 'PREVIOUS_PAGE' ){
+        state.feedback.pop();
+        const updatedState = { feedback: state.feedback, page: state.page - 1 }
+        return updatedState;
+    }
     if( action.type === 'NEW_FEEDBACK' ){
         const updatedState = { feedback: [], page: 0 };
         return updatedState;

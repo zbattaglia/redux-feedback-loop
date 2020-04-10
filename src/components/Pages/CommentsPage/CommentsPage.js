@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NextButton from '../../NextButton/NextButton';
 import { withRouter } from 'react-router-dom';
 import Header from '../../Header/Header';
+import BackButton from '../../BackButton/BackButton';
 
 class CommentsPage extends Component {
 
@@ -29,6 +30,7 @@ class CommentsPage extends Component {
             <form>
                 <input type="text" placeholder="Comments" onChange={ this.onChange }></input>
                 <NextButton response={ this.state }/>
+                <BackButton />
             </form>
         </section>
     );

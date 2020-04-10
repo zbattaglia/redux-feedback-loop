@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NextButton from '../../NextButton/NextButton';
 import { withRouter } from 'react-router-dom';
 import Header from '../../Header/Header';
+import BackButton from '../../BackButton/BackButton';
 
 class SupportPage extends Component {
 
@@ -31,6 +32,7 @@ class SupportPage extends Component {
             <form>
                 <input type="number" placeholder="Support?" onChange={ (event) => this.onChange( event ) }></input>
                 <NextButton response={ this.state }/>
+                <BackButton />
             </form>
         </section>
     );

@@ -3,6 +3,7 @@ import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 import {connect} from 'react-redux';
 import Header from '../../Header/Header';
+import BackButton from '../../BackButton/BackButton';
 
 class ReviewPage extends Component {
 
@@ -27,6 +28,7 @@ class ReviewPage extends Component {
     return (
         <section className="feedbackBody">
             <Header />
+            <p>{ JSON.stringify(this.props.feedback)}</p>
             <header>
                 <p>Review Your Feedback</p>
             </header>
@@ -35,6 +37,7 @@ class ReviewPage extends Component {
              </div>
              <br />
             <form>
+                <BackButton />
                 <button onClick={ this.handleSubmit }>Submit</button> 
             </form>
         </section>
