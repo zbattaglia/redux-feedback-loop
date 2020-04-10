@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import NextButton from '../../NextButton/NextButton';
+import { withRouter } from 'react-router-dom';
 
 class SupportPage extends Component {
+
   render() {
     return (
         <section className="feedbackBody">
@@ -9,11 +12,11 @@ class SupportPage extends Component {
             </header>
             <form>
                 <input type="number" placeholder="Support?"></input>
-                <button>NEXT</button> 
+                <NextButton />
             </form>
         </section>
     );
   }
 }
 
-export default SupportPage;
+export default withRouter( SupportPage );

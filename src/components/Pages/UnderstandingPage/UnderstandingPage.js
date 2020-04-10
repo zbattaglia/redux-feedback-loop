@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import NextButton from '../../NextButton/NextButton';
+import { withRouter } from 'react-router-dom';
 
 class UnderstandingPage extends Component {
+
   render() {
     return (
         <section className="feedbackBody">
@@ -9,11 +12,11 @@ class UnderstandingPage extends Component {
             </header>
             <form>
                 <input type="number" placeholder="Understanding?"></input>
-                <button>NEXT</button> 
+                <NextButton />
             </form>
         </section>
     );
   }
 }
 
-export default UnderstandingPage;
+export default withRouter( UnderstandingPage );

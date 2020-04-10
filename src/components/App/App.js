@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 
 import Header from '../Header/Header';
@@ -10,15 +10,22 @@ import CommentsPage from '../Pages/CommentsPage/CommentsPage';
 import ReviewPage from '../Pages/ReviewPage/ReviewPage';
 
 class App extends Component {
+
+  componentDidMount() {
+    // this.props.history.push( '/' );
+  }
+
   render() {
     return (
       <section className='App'>
         <Header />
-        <FeelingPage />
-        <UnderstandingPage />
-        <SupportPage />
-        <CommentsPage />
-        <ReviewPage />
+        <Router>
+          <Route exact path = '/' component={ FeelingPage } />
+          <Route path = '/1' component={ UnderstandingPage } />
+          <Route path = '/2' component={ SupportPage } />
+          <Route path = '/3' component={ CommentsPage } />
+          <Route path = '/4' component={ ReviewPage } />
+        </Router>
       </section>
     );
   }
