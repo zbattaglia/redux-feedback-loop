@@ -14,7 +14,7 @@ class ReviewPage extends Component {
         axios.post( '/feedback', this.props.feedback )
             .then( (response) => {
                 console.log( 'Posted feedback to the server' );
-
+                this.props.history.push( `/${ this.props.nextPage.page + 1 }`)
             })
             .catch( (error) => {
                 alert( `Couldn't submit feedback.` );
@@ -45,6 +45,7 @@ class ReviewPage extends Component {
 const mapStateToProps = (reduxStore) => ({
 
     feedback: reduxStore.changePage.feedback,
+    nextPage: reduxStore.changePage,
   
   })
   

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { HashRouter as Router, Route, withRouter } from 'react-router-dom';
 import './App.css';
 
-import Header from '../Header/Header';
 import FeelingPage from '../Pages/FeelingPage/FeelingPage';
 import UnderstandingPage from '../Pages/UnderstandingPage/UnderstandingPage';
 import SupportPage from '../Pages/SupportPage/SupportPage';
