@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-class PageTwo extends Component {
+class FeelingPage extends Component {
   render() {
     return (
         <section className="feedbackBody">
             <header>
-                <p>How well are you undestanding the content?</p>
+                <p>How are you feeling today?</p>
             </header>
             <form>
-                <input type="number" placeholder="Understanding?"></input>
+                <input type="number" placeholder="Feeling?"></input>
                 <button>NEXT</button> 
             </form>
         </section>
@@ -16,4 +16,4 @@ class PageTwo extends Component {
   }
 }
 
-export default PageTwo;
+export default FeelingPage;

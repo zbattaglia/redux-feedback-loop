@@ -3,20 +3,22 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Header from '../Header/Header';
-import PageOne from '../Pages/PageOne/PageOne';
-import PageTwo from '../Pages/PageTwo/PageTwo';
-import PageThree from '../Pages/PageThree/PageThree';
-import PageFour from '../Pages/PageFour/PageFour';
+import FeelingPage from '../Pages/FeelingPage/FeelingPage';
+import UnderstandingPage from '../Pages/UnderstandingPage/UnderstandingPage';
+import SupportPage from '../Pages/SupportPage/SupportPage';
+import CommentsPage from '../Pages/CommentsPage/CommentsPage';
+import ReviewPage from '../Pages/ReviewPage/ReviewPage';
 
 class App extends Component {
   render() {
     return (
       <section className='App'>
         <Header />
-        <PageOne />
-        <PageTwo />
-        <PageThree />
-        <PageFour />
+        <FeelingPage />
+        <UnderstandingPage />
+        <SupportPage />
+        <CommentsPage />
+        <ReviewPage />
       </section>
     );
   }

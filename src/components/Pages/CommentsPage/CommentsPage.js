@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-class PageThree extends Component {
+class CommentsPage extends Component {
   render() {
     return (
         <section className="feedbackBody">
             <header>
-                <p>How well are you being supported?</p>
+                <p>Any Comments you want to leave?</p>
             </header>
             <form>
-                <input type="number" placeholder="Support?"></input>
+                <input type="text" placeholder="Comments"></input>
                 <button>NEXT</button> 
             </form>
         </section>
@@ -16,4 +16,4 @@ class PageThree extends Component {
   }
 }
 
-export default PageThree;
+export default CommentsPage;
