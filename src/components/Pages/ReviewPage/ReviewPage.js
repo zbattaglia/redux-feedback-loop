@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 import {connect} from 'react-redux';
+import Header from '../../Header/Header';
 
 class ReviewPage extends Component {
 
@@ -25,6 +26,7 @@ class ReviewPage extends Component {
   render() {
     return (
         <section className="feedbackBody">
+            <Header />
             <header>
                 <p>Review Your Feedback</p>
             </header>

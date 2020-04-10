@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NextButton from '../../NextButton/NextButton';
 import { withRouter } from 'react-router-dom';
+import Header from '../../Header/Header';
 
 class CommentsPage extends Component {
 
@@ -21,6 +22,7 @@ class CommentsPage extends Component {
   render() {
     return (
         <section className="feedbackBody">
+            <Header />
             <header>
                 <p>Any comments you want to leave?</p>
             </header>

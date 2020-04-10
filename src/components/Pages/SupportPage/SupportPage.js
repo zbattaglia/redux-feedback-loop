@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NextButton from '../../NextButton/NextButton';
 import { withRouter } from 'react-router-dom';
+import Header from '../../Header/Header';
 
 class SupportPage extends Component {
 
@@ -23,6 +24,7 @@ class SupportPage extends Component {
   render() {
     return (
         <section className="feedbackBody">
+            <Header />
             <header>
                 <p>How well are you being supported?</p>
             </header>

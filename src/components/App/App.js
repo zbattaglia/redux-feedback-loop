@@ -8,6 +8,7 @@ import UnderstandingPage from '../Pages/UnderstandingPage/UnderstandingPage';
 import SupportPage from '../Pages/SupportPage/SupportPage';
 import CommentsPage from '../Pages/CommentsPage/CommentsPage';
 import ReviewPage from '../Pages/ReviewPage/ReviewPage';
+import SuccessPage from '../Pages/SuccessPage/SuccessPage';
 
 class App extends Component {
 
@@ -19,13 +20,13 @@ class App extends Component {
   render() {
     return (
       <section className='App'>
-        <Header />
         <Router>
           <Route exact path = '/' component={ FeelingPage } />
           <Route path = '/1' component={ UnderstandingPage } />
           <Route path = '/2' component={ SupportPage } />
           <Route path = '/3' component={ CommentsPage } />
           <Route path = '/4' component={ ReviewPage } />
+          <Route path = '/5' component={ SuccessPage } />
         </Router>
       </section>
     );

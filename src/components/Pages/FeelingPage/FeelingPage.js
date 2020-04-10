@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NextButton from '../../NextButton/NextButton';
 import { withRouter } from 'react-router-dom';
+import Header from '../../Header/Header';
 
 class FeelingPage extends Component {
 
@@ -23,6 +24,7 @@ class FeelingPage extends Component {
   render() {
     return (
         <section className="feedbackBody">
+            <Header />
             <header>
                 <p>How are you feeling today?</p>
             </header>
