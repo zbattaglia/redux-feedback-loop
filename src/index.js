@@ -14,27 +14,44 @@ import { Provider } from 'react-redux';
 
 // changePage to go forward and backward from button click action
 // initial page is 0
-const changePage = (state = { feedback: [], page: 0 }, action) => {
+const changePage = (state = { page: 0 }, action ) => {
     // if action is from a next button, page increments
     if( action.type === 'NEXT_PAGE' ){ 
-        const updatedState = { feedback: [ ...state.feedback, action.payload ], page: state.page + 1 }
+        const updatedState = { page: state.page + 1 }
         return updatedState;
     }
     if( action.type === 'PREVIOUS_PAGE' ){
-        state.feedback.pop();
-        const updatedState = { feedback: state.feedback, page: state.page - 1 }
+        const updatedState = { page: state.page - 1 }
         return updatedState;
     }
     if( action.type === 'NEW_FEEDBACK' ){
-        const updatedState = { feedback: [], page: 0 };
+        const updatedState = { page: 0 };
         return updatedState;
     }
     return state
 }
 
+const feedback = (state = [], action) => {
+    if( action.type === 'NEXT_PAGE' ){ 
+        const updatedState = [ ...state, action.payload ];
+        return updatedState;
+    }
+    if( action.type === 'PREVIOUS_PAGE' ){
+        state.pop();
+        const updatedState = state;
+        return updatedState;
+    }
+    if( action.type === 'NEW_FEEDBACK' ){
+        const updatedState = [];
+        return updatedState;
+    }
+    return state;
+}
+
 const storeInstance = createStore(
     combineReducers({
         changePage,
+        feedback,
     }),
     //Add our middleware logger
     applyMiddleware(logger)

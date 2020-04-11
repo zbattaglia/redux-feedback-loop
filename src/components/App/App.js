@@ -13,14 +13,14 @@ class App extends Component {
 
   // initial app startup should take us to the first page
   componentDidMount() {
-    this.props.history.push( '/' );
+    this.props.history.push( '/0' );
   }
 
   render() {
     return (
       <section className='App'>
         <Router>
-          <Route exact path = '/' component={ FeelingPage } />
+          <Route exact path = '/0' component={ FeelingPage } />
           <Route path = '/1' component={ UnderstandingPage } />
           <Route path = '/2' component={ SupportPage } />
           <Route path = '/3' component={ CommentsPage } />

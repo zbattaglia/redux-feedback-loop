@@ -29,7 +29,7 @@ class ReviewPage extends Component {
     return (
         <section className="feedbackBody">
             <Header />
-            <p>{ JSON.stringify(this.props.feedback)}</p>
+            {/* <p>{ JSON.stringify(this.props.feedback)}</p> */}
             <header>
                 <p>Review Your Feedback</p>
             </header>
@@ -48,7 +48,7 @@ class ReviewPage extends Component {
 
 const mapStateToProps = (reduxStore) => ({
 
-    feedback: reduxStore.changePage.feedback,
+    feedback: reduxStore.feedback,
     nextPage: reduxStore.changePage,
   
   })

@@ -16,7 +16,7 @@ class FeedbackList extends Component {
 
 const putReduxStateOnProps = ( reduxStore ) => ({
 
-    feedback: reduxStore.changePage.feedback,
+    feedback: reduxStore.feedback,
   
   });
 

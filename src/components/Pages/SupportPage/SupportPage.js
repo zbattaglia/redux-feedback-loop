@@ -8,7 +8,7 @@ class SupportPage extends Component {
 
   // initial state is empty
   state = {
-    type: 'Support',
+    type: 'support',
     response: '',
   }
   

@@ -8,7 +8,7 @@ class UnderstandingPage extends Component {
 
   // initial state is empty
   state = {
-    type: 'Understanding',
+    type: 'understanding',
     response: '',
   }
   

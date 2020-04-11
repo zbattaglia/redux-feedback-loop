@@ -8,7 +8,7 @@ class SuccessPage extends Component {
   handleClick = () => {
     console.log( 'Submit new feedback' );
     this.props.dispatch({ type: 'NEW_FEEDBACK' });
-    this.props.history.push( `/`)
+    this.props.history.push( `/0`)
   };
 
   render() {

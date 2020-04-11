@@ -12,12 +12,7 @@ class BackButton extends Component {
     handleClick = ( event ) => {
         event.preventDefault();
         this.props.dispatch({ type: 'PREVIOUS_PAGE' });
-        if( this.props.page === 1 ){
-            this.props.history.push( `/`)
-        }
-        else {
-            this.props.history.push( `/${ this.props.page - 1 }`)
-        }
+        this.props.history.push( `/${ this.props.page - 1 }`)
     }
 
     render() {

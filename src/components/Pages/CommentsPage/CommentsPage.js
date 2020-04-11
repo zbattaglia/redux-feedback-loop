@@ -8,7 +8,7 @@ class CommentsPage extends Component {
 
   // Initial state is N/A in case they have no comments to leave.
   state = {
-    type: 'Comments',
+    type: 'comments',
     response: 'N/A',
   }
 

@@ -7,7 +7,7 @@ class FeelingPage extends Component {
 
   // initial state is empty
   state = {
-    type: 'Feelings',
+    type: 'feeling',
     response: '',
   }
   
