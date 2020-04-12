@@ -14,6 +14,18 @@ router.post( '/', (req, res) => {
             console.log( 'Error adding feedback to database', error );
             res.sendStatus( 500 );
         })
-})
+}); // end POST route
+
+router.get( '/', (req, res) => {
+    const queryText = `Select * from "feedback" ORDER BY "date";`;
+    pool.query( queryText )
+        .then( (result) => {
+            res.send( result.rows );
+        })
+        .catch( (error) => {
+            console.log( 'Error GETTING from database', error );
+            res.sendStatus( 500 );
+        })
+}); // end GET route
 
 module.exports = router;
