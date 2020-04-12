@@ -8,6 +8,7 @@ import SupportPage from '../Pages/SupportPage/SupportPage';
 import CommentsPage from '../Pages/CommentsPage/CommentsPage';
 import ReviewPage from '../Pages/ReviewPage/ReviewPage';
 import SuccessPage from '../Pages/SuccessPage/SuccessPage';
+import AdminPage from '../Pages/AdminPage/AdminPage';
 
 class App extends Component {
 
@@ -26,6 +27,7 @@ class App extends Component {
           <Route path = '/3' component={ CommentsPage } />
           <Route path = '/4' component={ ReviewPage } />
           <Route path = '/5' component={ SuccessPage } />
+          <Route path = '/admin' component={ AdminPage } />
         </Router>
       </section>
     );
