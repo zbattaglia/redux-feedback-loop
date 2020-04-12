@@ -5,6 +5,7 @@ import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 import { HashRouter as Router } from 'react-router-dom';
 
+
 //Bring in Redux Logger
 import logger from 'redux-logger';
 
@@ -48,10 +49,18 @@ const feedback = (state = [], action) => {
     return state;
 }
 
+const feedbackHistory = ( state = [], action ) => {
+    if( action.type === 'SET_FEEDBACK' ){
+        return action.payload;
+    }
+    return state;
+}
+
 const storeInstance = createStore(
     combineReducers({
         changePage,
         feedback,
+        feedbackHistory,
     }),
     //Add our middleware logger
     applyMiddleware(logger)
