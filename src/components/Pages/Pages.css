@@ -1,0 +1,31 @@
+.Card {
+    border: solid;
+    background-color: aqua;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+#next {
+    text-align: right;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+#back {
+    text-align: right;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+#input {
+    padding-top: 3rem;
+}
+
+#newFeedback {
+    margin: 4rem;
+}

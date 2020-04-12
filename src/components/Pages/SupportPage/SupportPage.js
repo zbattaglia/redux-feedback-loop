@@ -3,6 +3,27 @@ import NextButton from '../../NextButton/NextButton';
 import { withRouter } from 'react-router-dom';
 import Header from '../../Header/Header';
 import BackButton from '../../BackButton/BackButton';
+import TextField from '@material-ui/core/TextField';
+//card imports
+import { withStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardHeader from '@material-ui/core/CardHeader';
+
+const styles = theme => ({
+  card: {
+    minWidth: 500,
+    minHeight: 300,
+    display: 'inline-block',
+    marginTop: '7rem',
+    boxShadow: '0 16px 70px -12px',
+  },
+  textField: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    width: 250,
+  },
+});
 
 class SupportPage extends Component {
 
@@ -23,20 +44,27 @@ class SupportPage extends Component {
   }
 
   render() {
+    const classes = this.props.classes;
     return (
-        <section className="feedbackBody">
-            <Header />
-            <header>
-                <p>How well are you being supported?</p>
-            </header>
+        <>
+          <Header />
+          <Card className={ classes.card }>
+            <CardHeader title="How well are you being supported?"></CardHeader>
             <form>
-                <input type="number" placeholder="Support?" onChange={ (event) => this.onChange( event ) }></input>
-                <NextButton response={ this.state }/>
-                <BackButton />
+              <div id="input">
+                <TextField required id="standard-required" type="number" label="Support?" className={ classes.textField } onChange={ (event) => this.onChange( event ) }></TextField>
+              </div>
+              <CardActions>
+                <div id="buttons">
+                  <BackButton />
+                  <NextButton response={ this.state }/>
+                </div>
+              </CardActions>
             </form>
-        </section>
+          </Card>
+        </>
     );
   }
 }
 
-export default withRouter( SupportPage );
+export default withRouter( (withStyles(styles)(SupportPage)) );
