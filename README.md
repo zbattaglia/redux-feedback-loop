@@ -10,10 +10,14 @@ To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](https:
 
 ## Screen Shot
 
-![ Sample_Page ](https://github.com/zbattaglia/redux-feedback-loop/blob/master/wireframes/Admin%20Page.png?raw=true "Example Feedback Page")
-![ Alert ](wireframes/Improper Input Alert.png "Example Improper Input Alert")
-![ Review_Page ](wireframes/Review and Submit Page.png "Review and Submit Page")
-![ Admin_Page ](wireframes/Admin Page.png "Admin Page")
+![ Sample_Page ](https://github.com/zbattaglia/redux-feedback-loop/blob/master/wireframes/Example%20Feedback%20Page.png "Example Feedback Page")
+Example Feedback Page
+![ Alert ](https://github.com/zbattaglia/redux-feedback-loop/blob/master/wireframes/Improper%20Input%20Alert.png "Example Improper Input Alert")
+Improper Input Alert
+![ Review_Page ](https://github.com/zbattaglia/redux-feedback-loop/blob/master/wireframes/Review%20and%20Submit%20Page.png "Review and Submit Page")
+Review and Submit Page
+![ Admin_Page ](https://github.com/zbattaglia/redux-feedback-loop/blob/master/wireframes/Admin%20Page.png "Admin Page")
+Admin Page
 
 ### Prerequisites
 
