@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import {connect} from 'react-redux';
+import Button from '@material-ui/core/Button';
+import { withStyles } from '@material-ui/core/styles';
+import ArrowForward from '@material-ui/icons/ArrowForward'
 
+const styles = theme => ({
+    button: {
+        margin: theme.spacing.unit,
+    }
+});
 
 // Made a component for next button since it is used for the exact same function multiple times throughout the code
 class NextButton extends Component {
@@ -24,8 +32,9 @@ class NextButton extends Component {
     }
 
     render() {
+        const classes = this.props.classes;
         return (
-            <button onClick = { this.handleClick }>NEXT</button>
+            <Button variant="contained"  className={classes.button} onClick = { this.handleClick }>NEXT<ArrowForward /></Button>
         );
     }
 }
@@ -36,4 +45,4 @@ const putReduxStateOnProps = ( reduxStore ) => ({
   
   });
 
-export default withRouter( connect( putReduxStateOnProps )( NextButton ) );
+export default withRouter( connect( putReduxStateOnProps )(withStyles(styles)( NextButton )) );

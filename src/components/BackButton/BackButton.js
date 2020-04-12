@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import {connect} from 'react-redux';
+import Button from '@material-ui/core/Button';
+import { withStyles } from '@material-ui/core/styles';
+import ArrowBack from '@material-ui/icons/ArrowBack'
+
+const styles = theme => ({
+    button: {
+        margin: theme.spacing.unit,
+    }
+});
 
 
 // Made a component for next button since it is used for the exact same function multiple times throughout the code
@@ -16,8 +25,9 @@ class BackButton extends Component {
     }
 
     render() {
+        const classes = this.props.classes;
         return (
-            <button onClick = { this.handleClick }>BACK</button>
+            <Button variant="contained" className={classes.button} onClick = { this.handleClick }><ArrowBack />BACK</Button>
         );
     }
 }
@@ -28,4 +38,4 @@ const putReduxStateOnProps = ( reduxStore ) => ({
   
   });
 
-export default withRouter( connect( putReduxStateOnProps )( BackButton ) );
+export default withRouter( connect( putReduxStateOnProps )(withStyles(styles)( BackButton )) );

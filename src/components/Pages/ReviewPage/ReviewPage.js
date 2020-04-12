@@ -5,6 +5,26 @@ import {connect} from 'react-redux';
 import Header from '../../Header/Header';
 import BackButton from '../../BackButton/BackButton';
 import FeedbackList from '../../FeedbackList/FeedbackList';
+import '../Pages.css';
+import { withStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardHeader from '@material-ui/core/CardHeader';
+import Button from '@material-ui/core/Button';
+
+const styles = theme => ({
+    card: {
+      minWidth: 500,
+      minHeight: 300,
+      display: 'inline-block',
+      marginTop: '7rem',
+      boxShadow: '0 16px 70px -12px',
+    },
+    button: {
+        margin: theme.spacing.unit,
+    }
+  });
+  
 
 class ReviewPage extends Component {
 
@@ -26,31 +46,30 @@ class ReviewPage extends Component {
     }; // end handleSubmit 
 
   render() {
+    const classes = this.props.classes;
     return (
-        <section className="feedbackBody">
+        <>
             <Header />
-            {/* <p>{ JSON.stringify(this.props.feedback)}</p> */}
-            <header>
-                <p>Review Your Feedback</p>
-            </header>
-             <div className="feedback">
+            <Card className = {classes.card }>
+                <CardHeader title="Review Your Feedback"></CardHeader>
                  <FeedbackList />
-             </div>
-             <br />
-            <form>
-                <BackButton />
-                <button onClick={ this.handleSubmit }>Submit</button> 
-            </form>
-        </section>
+            <CardActions>
+                <div id="buttons">
+                    <BackButton />
+                    <Button variant="contained" color="primary" className={ classes.button } onClick={ this.handleSubmit }>Submit</Button>
+                </div>
+            </CardActions>
+            </Card>
+        </>
     );
   }
 }
 
-const mapStateToProps = (reduxStore) => ({
+const putReduxStateOnProps  = (reduxStore) => ({
 
     feedback: reduxStore.feedback,
     nextPage: reduxStore.changePage,
   
   })
   
-  export default withRouter(connect( mapStateToProps )(ReviewPage));
+  export default withRouter( connect( putReduxStateOnProps )(withStyles(styles)( ReviewPage )) );
