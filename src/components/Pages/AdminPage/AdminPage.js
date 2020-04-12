@@ -30,7 +30,7 @@ class AdminPage extends Component {
     return (
         <>
             <AdminHeader />
-            <FeedbackTable />
+            <FeedbackTable getFeedback={ this.getFeedback }/>
         </>
     );
   }

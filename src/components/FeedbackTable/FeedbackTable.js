@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import Delete from '@material-ui/icons/DeleteTwoTone';
 import {connect} from 'react-redux';
 import Flag from '../Flag/Flag';
+import axios from 'axios';
 
 // Table styling
 import Table from '@material-ui/core/Table';
@@ -44,6 +45,19 @@ const CustomTableCell = withStyles(theme => ({
 
 function FeedbackTable (props) {
 
+  const handleDelete = ( event, id ) => {
+    console.log( 'Got a delete', id );
+    axios.delete( `/feedback/${id}`)
+      .then( (response) => {
+        console.log( 'Deleted row' );
+        props.getFeedback();
+      })
+      .catch( (error) => {
+        console.log( 'Error deleting row', error );
+      })
+
+  };
+
   const classes= props.classes;
 
   return (
@@ -64,7 +78,7 @@ function FeedbackTable (props) {
               <CustomTableCell>{ response.support }</CustomTableCell>
               <CustomTableCell>{ response.comments }</CustomTableCell>
               <CustomTableCell>
-                <Button className={ classes.button }><Delete /></Button>
+                <Button className={ classes.button } onClick={ ( event ) => handleDelete( event, response.id ) }><Delete /></Button>
               </CustomTableCell>
               <CustomTableCell><Flag flagged={ response.flagged } /></CustomTableCell>
             </TableRow>
