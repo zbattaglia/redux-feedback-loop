@@ -1,4 +1,12 @@
 import React, { Component } from 'react';
+import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+
+const styles = theme => ({
+    button: {
+        margin: theme.spacing.unit,
+    }
+});
 
 class Flag extends Component {
 
@@ -7,11 +15,12 @@ class Flag extends Component {
     }
 
     showFlag(){
+        const classes = this.props.classes;
         if( this.props.flagged ) {
-            return <p>Requires Further Review<br /><button onClick={ this.toggleFlag }>Complete</button></p>
+            return <p>Requires Further Review<br /><Button variant="contained" color="primary" className={ classes.button } onClick={ this.toggleFlag }>Complete</Button></p>
         }
         else {
-            return <button onClick={ this.toggleFlag }>Flag</button>
+            return <Button variant="contained" color="secondary" className={ classes.button } onClick={ this.toggleFlag }>Flag</Button>
         }
     }
 
@@ -25,4 +34,4 @@ class Flag extends Component {
 
 }
 
-export default Flag;
+export default withStyles(styles)( Flag );

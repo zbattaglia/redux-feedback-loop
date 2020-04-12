@@ -6,8 +6,6 @@ import '../Pages.css';
 import FeedbackTable from '../../FeedbackTable/FeedbackTable';
 import axios from 'axios';
 import {connect} from 'react-redux';
-// import { withStyles } from '@material-ui/core/styles';
-  
 
 class AdminPage extends Component {
 
