@@ -62,6 +62,7 @@ function FeedbackTable (props) {
 
   return (
     <>
+    <p>**DELETE's cannot be undone. Feeback requiring further review is sorted to the top of the table.</p>
       <Table className={ classes.table }>
         <TableHead>
           <TableRow>

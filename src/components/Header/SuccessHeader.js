@@ -6,7 +6,7 @@ class SuccessHeader extends Component {
     return (
         <div className="success">
             <header className="success-header">
-                <h1 className="success-title">Feedback!</h1>
+                <h1 className="success-title">Feedback Submitted Successfully!</h1>
             </header>
         </div>
     );
