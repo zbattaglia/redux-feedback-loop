@@ -80,7 +80,7 @@ function FeedbackTable (props) {
               <CustomTableCell>
                 <Button className={ classes.button } onClick={ ( event ) => handleDelete( event, response.id ) }><Delete /></Button>
               </CustomTableCell>
-              <CustomTableCell><Flag flagged={ response.flagged } /></CustomTableCell>
+              <CustomTableCell><Flag flagId={ response.id } flagged={ response.flagged } getFeedback={ props.getFeedback } /></CustomTableCell>
             </TableRow>
           )}
         </TableBody>
