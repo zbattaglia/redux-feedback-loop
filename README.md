@@ -10,7 +10,7 @@ To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](https:
 
 ## Screen Shot
 
-![ Sample_Page ](wireframes/Example Feedback Page.png "Example Feedback Page")
+![ Sample_Page ](https://github.com/zbattaglia/redux-feedback-loop/blob/master/wireframes/Admin%20Page.png?raw=true "Example Feedback Page")
 ![ Alert ](wireframes/Improper Input Alert.png "Example Improper Input Alert")
 ![ Review_Page ](wireframes/Review and Submit Page.png "Review and Submit Page")
 ![ Admin_Page ](wireframes/Admin Page.png "Admin Page")
