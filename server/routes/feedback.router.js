@@ -39,6 +39,22 @@ router.delete( '/:id', (req, res) => {
             console.log( 'Error', error );
             res.sendStatus( 500 );
         })
-})
+}); // end DELETE route
+
+router.put( '/flag/:id', (req, res) => {
+    const id = req.params.id;
+    console.log( `toggling ${ id }`);
+    const queryText = `UPDATE "feedback" SET "flagged" = NOT "flagged" WHERE "id" = $1;`;
+
+    pool.query( queryText, [ id ] )
+        .then( (result) => {
+            console.log( 'Successful PUT to database' );
+            res.sendStatus( 201 );
+        })
+        .catch( (error) => {
+            console.log( 'Error with PUT to database', error );
+            res.sendStatus( 501 );
+        })
+}); // end PUT route
 
 module.exports = router;
