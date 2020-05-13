@@ -4,7 +4,7 @@
 
 _Duration: 2 Days_
 
-This application is an example feedback form to gather users current feelings when learning in a class. There is also an admin page onl accessible to approved users for review of all feedback entries submitted to a database. This project developed skills with react, redux, and material-ui and handling local, as well as Redux, state and props. The ability to work with and query a database was also tested in developing this application.
+This application is an example feedback form to gather user feedback when taking a class. There are several pages that require user input between 1 and 5. There is also an admin page only accessible to approved users for review of all feedback entries submitted to a database. This project developed skills with react, redux, and material-ui and handling local, as well as Redux, state and props. The ability to work with and query a database was also tested in developing this application.
 
 To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](https://primefeedback.herokuapp.com/#/0)
 
